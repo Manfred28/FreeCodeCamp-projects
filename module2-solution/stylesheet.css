@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+[class*="col-"] {
+	width: 100%;
+	float: left;
+	margin-bottom: 5px;
+
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+.col-m-1 {width: 8.35%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33%;}
+.col-m-5 {width: 41.66%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33%;}
+.col-m-8 {width: 66.66%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66;}
+.col-m-12 {width: 100%;}
+
+}
+
+@media (min-width: 992px) {
+.col-1 {width: 8.35%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66;}
+.col-12 {width: 100%;}
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin: 20px;
+	font-size: 1.75em;
+	font-family: Verdana serif;
+}
+
+div.foodItem > p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.row {
+	display: flex;   
+	flex-wrap: wrap;   /*this is so that columns are always the same size */	
+}
+
+.foodItem {
+	border: 2px solid black;
+	margin: 5px;
+	height: 100%;
+	position: relative;
+	padding-top: 35px;
+	background-color: #8F9D97;
+} 
+
+.sectionTitle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	height: 30px;
+	padding-top: 3px;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.sectionTitle p {
+	text-align: center;
+	font-size: 1.25em;
+
+}
+
+section:nth-child(1) .sectionTitle {
+	background-color: #E39898;
+}
+section:nth-child(2) .sectionTitle  {
+	background-color: #C83754;
+	color: white;
+}
+section:nth-child(3) .sectionTitle  {
+	background-color: #C9D072;
+}
+
