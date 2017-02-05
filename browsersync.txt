@@ -1,0 +1,2 @@
+move to hellow-world dir then: 
+browser-sync start --server --directory --files "*"

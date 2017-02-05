@@ -49,7 +49,7 @@ h1 {
 	text-align: center;
 	margin: 20px;
 	font-size: 1.75em;
-	font-family: Verdana serif;
+	font-family: Verdana, sans-serif;
 }
 
 div.foodItem > p {
@@ -58,8 +58,9 @@ div.foodItem > p {
 }
 
 .row {
-	display: flex;   
-	flex-wrap: wrap;   /*this is so that columns are always the same size */	
+	display: flex;  
+	flex-wrap: wrap;   /*this is so that columns are always the same size */
+	
 }
 
 .foodItem {
