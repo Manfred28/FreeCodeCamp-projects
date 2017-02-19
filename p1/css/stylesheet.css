@@ -1,0 +1,123 @@
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #d9d9d9;
+}
+
+.navbar {
+	display: table;
+	width: 100%;
+	background-color: #ccc;
+	height: 40px;
+	
+}
+
+.navbar > .container {
+	display:table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.navbar > .container span {
+	padding-right: 12px;
+	font-weight: 600;
+	font-size: 1.2em;
+	font-family: Georgia, serif;
+}
+
+#mainTitle .container {
+	margin-top: 15px;
+	margin-bottom: 120px;
+
+}
+
+#mainTitle .container span{
+	display: block;
+	text-align: center;
+	font-size: 3em;
+}
+
+/*EnD of header */
+
+/*START of main content*/
+
+#main-content {
+	padding-top: 10px;
+	background-color: white;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+
+}
+
+.postColumn .container {
+
+	margin-bottom: 10px;
+	padding: 5px;
+	display: block;
+	margin-left: 10px;
+	
+	border-radius: 10px;
+	width: 65%;
+}
+
+.postImg {
+	margin-bottom: 10px;
+}
+
+.postImg img {
+	max-width: 100%
+}
+
+.postTitle {
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-size: 1.8em;
+	font-weight: 600;
+}
+
+
+.sidebar {
+	width: 25%;
+	float: right;
+	margin-top: 10px;
+}
+
+.popularPosts .container {
+	display: block;
+	position: relative;
+	background-color: orange;
+	width: 120%;
+	height: 40px;
+	margin-bottom: 30px;
+}
+
+.popularPosts .container .sectionTitle {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+.popularPosts .sidebarPost {
+	display: block;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	width: 90%;
+	height: 120px;
+	
+	border-bottom: 2px solid black;
+	clear: both;
+}
+
+.popularPosts img {
+	float: left;
+	margin-right: 5px;
+	width: 25%;
+}
