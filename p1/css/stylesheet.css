@@ -8,6 +8,21 @@
 body {
 	background-color: #d9d9d9;
 }
+
+@media (max-width: 969px) {
+	.col-sm-hide {
+		display: none;
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+}
+
+@media (min-width: 970px) {
+	.col-m-8 {
+		width: 65%;
+	}
+}
 /*   ************************          Header START          *********************** */
 
 .navbar {
@@ -45,11 +60,11 @@ body {
 	font-size: 3em;
 	font-family: 'Caveat Brush', cursive;
 }
-
 /*EnD of header */
 
-/* /*  ************************          Main content START          *********************** */
+/*  ************************          Main content START          *********************** */
 
+/*  ************************          Posts START          *********************** */
 #main-content {
 	padding-top: 10px;
 	background-color: white;
@@ -60,14 +75,12 @@ body {
 }
 
 .postColumn .container {
-
 	margin-bottom: 10px;
 	padding: 5px;
 	display: block;
 	margin-left: 10px;
-	
+	margin-right: 10px;
 	border-radius: 10px;
-	width: 65%;
 }
 
 .postImg {
@@ -84,9 +97,9 @@ body {
 	font-size: 1.8em;
 	font-weight: 600;
 }
+/*EnD of posts */
 
 	/*  ************************        main /  SIDEBAR START          *********************** */
-
 .sidebar {
 	width: 25%;
 	float: right;
@@ -119,7 +132,6 @@ body {
 	margin-bottom: 20px;
 	width: 90%;
 	height: 120px;
-	
 	border-bottom: 2px solid black;
 	clear: both;
 }
