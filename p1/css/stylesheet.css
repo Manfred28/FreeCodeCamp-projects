@@ -89,6 +89,7 @@ body {
 
 .postImg img {
 	width: 100%
+	min-height: 400px; /* to avoid content jump */
 }
 
 .postTitle {
@@ -140,7 +141,6 @@ body {
 	float: left;
 	margin-right: 10px;
 	width: 25%;
-	min-height: 400px; /* to avoid content jump */
 }
 
 .secondSection {
