@@ -8,6 +8,7 @@
 body {
 	background-color: #d9d9d9;
 }
+/*   ************************          Header START          *********************** */
 
 .navbar {
 	display: table;
@@ -23,11 +24,13 @@ body {
 	text-align: center;
 }
 
-.navbar > .container span {
+.navbar > .container a {
 	padding-right: 12px;
 	font-weight: 600;
 	font-size: 1.2em;
 	font-family: Georgia, serif;
+	text-decoration: none;
+	color: inherit;
 }
 
 #mainTitle .container {
@@ -40,11 +43,12 @@ body {
 	display: block;
 	text-align: center;
 	font-size: 3em;
+	font-family: 'Caveat Brush', cursive;
 }
 
 /*EnD of header */
 
-/*START of main content*/
+/* /*  ************************          Main content START          *********************** */
 
 #main-content {
 	padding-top: 10px;
@@ -81,6 +85,7 @@ body {
 	font-weight: 600;
 }
 
+	/*  ************************        main /  SIDEBAR START          *********************** */
 
 .sidebar {
 	width: 25%;
@@ -88,24 +93,27 @@ body {
 	margin-top: 10px;
 }
 
-.popularPosts .container {
+.sidebarHeader .container {  /* The orange line */
 	display: block;
 	position: relative;
 	background-color: orange;
+	border-right: 5px solid #e68a00;
 	width: 120%;
 	height: 40px;
 	margin-bottom: 30px;
+	margin-top: 10px;
 }
 
-.popularPosts .container .sectionTitle {
+.sidebarHeader .container .sectionTitle {  /* actual text within the orange line */
 	position: absolute;
 	top: 5px;
 	left: 10px;
 	font-size: 1.5em;
 	font-weight: 500;
+	text-shadow: 2px 2px 1px #ffffff;
 }
 
-.popularPosts .sidebarPost {
+.popularPosts .sidebarPost { 
 	display: block;
 	margin-left: 15px;
 	margin-bottom: 20px;
@@ -118,6 +126,30 @@ body {
 
 .popularPosts img {
 	float: left;
-	margin-right: 5px;
+	margin-right: 10px;
 	width: 25%;
+}
+
+.secondSection {
+	margin-top: 40px;
+}
+
+.secondSection ul {
+	list-style-position: inside;
+}
+
+	/* SIDEBAR END */
+/* MAIN CONTENT END */
+
+
+
+
+/* miscellaneous */
+
+.upperCase {
+	text-transform: uppercase;
+}
+
+.orangeText {
+	color: #cc9900;
 }
