@@ -88,7 +88,7 @@ body {
 }
 
 .postImg img {
-	width: 100%
+	width: 100%;
 	min-height: 400px; /* to avoid content jump */
 }
 
