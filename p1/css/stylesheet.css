@@ -27,10 +27,9 @@ body {
 
 .navbar {
 	display: table;
-	width: 100%;
-	background-color: #ccc;
 	height: 40px;
-	
+	width: 100%;
+	background-color: #ccc;	
 }
 
 .navbar > .container {
@@ -40,25 +39,43 @@ body {
 }
 
 .navbar > .container a {
-	padding-right: 12px;
+	padding: 0px 30px;
 	font-weight: 600;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-family: Georgia, serif;
 	text-decoration: none;
 	color: inherit;
 }
 
-#mainTitle .container {
-	margin-top: 50px;
-	margin-bottom: 80px;
-
+.navbar > .container a:hover {
+	background-color: #F8F8FF;
 }
 
-#mainTitle .container span{
+#mainTitle h1{
 	display: block;
+	margin-top: 50px;
+	margin-bottom: 80px;
 	text-align: center;
 	font-size: 3em;
 	font-family: 'Caveat Brush', cursive;
+}
+
+.navbar div {
+	display: inline-block;
+	position: relative;
+}
+
+.navbar p {
+	display: none;
+	position: absolute;
+	right: 1px;
+	width: 300px;
+	background-color: #ccc;
+	margin-top: 6px;
+}
+
+.navbar a:hover+p {
+	display: block;
 }
 /*EnD of header */
 
@@ -74,7 +91,7 @@ body {
 
 }
 
-.postColumn .container {
+.postColumn article {
 	margin-bottom: 10px;
 	padding: 5px;
 	display: block;
@@ -83,13 +100,20 @@ body {
 	border-radius: 10px;
 }
 
-.postImg {
+
+.postColumn article img {
+	width: 100%;
+	min-height: 520px; /* to avoid content jump */
 	margin-bottom: 10px;
+	transition: width 2s, height 2s, transform 2s;
+	transition-timing-function: linear;
+	
 }
 
-.postImg img {
-	width: 100%;
-	min-height: 400px; /* to avoid content jump */
+.postColumn article img:hover {
+	width: 0px;
+	transform: rotate(180deg);
+
 }
 
 .postTitle {
@@ -107,7 +131,7 @@ body {
 	margin-top: 10px;
 }
 
-.sidebarHeader .container {  /* The orange line */
+.sidebarHeader section {  /* The orange line */
 	display: block;
 	position: relative;
 	background-color: orange;
@@ -118,7 +142,7 @@ body {
 	margin-top: 10px;
 }
 
-.sidebarHeader .container .sectionTitle {  /* actual text within the orange line */
+.sidebarHeader section .sectionTitle {  /* actual text within the orange line */
 	position: absolute;
 	top: 5px;
 	left: 10px;
@@ -142,6 +166,7 @@ body {
 	margin-right: 10px;
 	width: 25%;
 }
+
 
 .secondSection {
 	margin-top: 40px;
