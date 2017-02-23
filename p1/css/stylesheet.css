@@ -69,13 +69,16 @@ body {
 	display: none;
 	position: absolute;
 	right: 1px;
-	width: 300px;
+	
+	width: 0px;
 	background-color: #ccc;
-	margin-top: 6px;
+	font-weight: 600;
+
 }
 
 .navbar a:hover+p {
 	display: block;
+	width: 150px;
 }
 /*EnD of header */
 
