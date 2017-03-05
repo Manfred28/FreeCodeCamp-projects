@@ -23,30 +23,26 @@ function chooseTrans () {
 
 var transType = ""
 
-function transform () {
+function transform (self) {
 	transType = chooseTrans()
-	var elem = document.querySelectorAll(".postColumn article img");
-	for (i = 0; i < elem.length; i++) {
-		elem[i].style.transform = transType;
-		elem[i].style.width = "0px";
-	};
+		self.style.transform = transType;
+		self.style.width = "0px";
 	console.log(transType);
 };
 
-function transformBack () {
+function transformBack (self) {
 	var elem = document.querySelectorAll(".postColumn article img");
-	for (i = 0; i < elem.length; i++) {
-		elem[i].style.width = "100%";
+		self.style.width = "100%";
 		if (transType === ("scale(0.5)")) {
-			elem[i].style.transform = "scale(1)";
+			self.style.transform = "scale(1)";
 		};
 		if (transType === "rotate(180deg)") {
-			elem[i].style.transform = "rotate(360deg)"
-		}
+			self.style.transform = "rotate(360deg)"
+		};
 		if (transType === "skew(20deg, 40deg)") {
-			elem[i].style.transform = "skew(0deg, 0deg)"
-		}
-	}
+			self.style.transform = "skew(0deg, 0deg)"
+		};
+	
 }
 
 window.transform = transform;
