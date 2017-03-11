@@ -1,0 +1,46 @@
+
+body {
+	background-color: #e6f7ff;
+	padding-top: 50px;
+}
+
+section {
+	padding-top: 25px;
+	height: 100%;
+}
+
+.container > section:nth-child(1) {
+	 /* use gradients */
+	background: #e6f7ff;
+	background-image: webkit-linear-gradient(#e6f7ff, #ccefff);
+	background: -o-linear-gradient(#e6f7ff, #ccefff); 
+  	background: -moz-linear-gradient(#e6f7ff, #ccefff);
+	background: linear-gradient(#e6f7ff, #ccefff);
+}
+
+ .container > section:nth-child(2) {
+ 	background-color:  #ccefff;
+ 	background-image: webkit-linear-gradient(#ccefff, #b3e7ff);
+ 	background: -o-linear-gradient(#ccefff, #b3e7ff); 
+  	background: -moz-linear-gradient(#ccefff, #b3e7ff);
+	background: linear-gradient(#ccefff, #b3e7ff);
+ }
+
+.container > section:nth-child(3) {
+ 	background-color:  #b3e7ff;   /* #99dfff      */
+ 	background-image: webkit-linear-gradient(#b3e7ff, #99dfff);
+ 	background: -o-linear-gradient(#b3e7ff, #99dfff); 
+  	background: -moz-linear-gradient(#b3e7ff, #99dfff);
+	background: linear-gradient(#b3e7ff, #99dfff);
+ }
+
+.form-group{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+hr {
+	max-width: 200px;
+}
+
+
