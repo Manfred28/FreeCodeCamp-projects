@@ -8,35 +8,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/8589643f45.css">
     <title>mahPortfolio</title>
   </head>
   <body>
+  															<!--  ************** NAVBAR **************  -->
+	<header>												
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  	<a class="navbar-brand" href="#">Welcome to my Portfolio</a>
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">Navbar</a>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#About">About <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Portfolio">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Contact">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#About">About <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#Portfolio">Portfolio</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#Contact">Contact</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
   															<!--  ************** MAIN **************  -->
     <div class="container">
     														<!--  ************** ABOUT **************  -->
-    	<section id="About">
+    	<section>
+    		<a id="About">&nbsp;</a>
     		<div class="row p-3"> <!-- TO DO: optimise smaller screen sizes -->
     			<div class="col-12 col-lg-8"> 
     				<h2 class="text-center">That's me</h2>
@@ -49,7 +52,8 @@
     		</div>
     	</section>
     														<!--  ************** PORTFOLIO **************  -->
-    	<section id="Portfolio">
+    	<section>
+    		<a id="Portfolio">&nbsp;</a>
     		<div class="row" >
     			<div class="col-12 mx-auto p-3"> 
     					<h2 class="text-center"> Portfolio </h2>
@@ -70,7 +74,8 @@
     		</div>
     	</section>
     														<!--  ************** CONTACT **************  -->
-    	<section id="Contact">
+    	<section>
+    		<a id="Contact">&nbsp;</a>
     		<div class="row">
 	    		<div class="col-12 mx-auto p-3"> 
 	    			<h2 class="text-center"> Contact Me </h2>
@@ -96,7 +101,17 @@
     	</section>
     </div>
 
-    													<!--  ************** FOOTER **************  -->
+    <footer>
+    	<div class="container-fluid">
+    		<div class="col-12  text-center">
+    			<div>
+    				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    				<a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+    			</div>	
+    		</div>
+    	</div>
+    </footer>													<!--  ************** FOOTER **************  -->
 
 
 

@@ -9,6 +9,10 @@ section {
 	height: 100%;
 }
 
+#About + div h2 {
+	margin-bottom: 25px;
+}
+
 .container > section:nth-child(1) {
 	 /* use gradients */
 	background: #e6f7ff;
@@ -34,13 +38,52 @@ section {
 	background: linear-gradient(#b3e7ff, #99dfff);
  }
 
-.form-group{
+div.form-group{
 	padding-left: 30px;
 	padding-right: 30px;
 }
 
 hr {
 	max-width: 200px;
+	border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px #4da6ff;
+    margin-bottom: 30px;
 }
 
+#About {
+	visibility: hidden;
+    margin-top: -50px;
+    padding-top: 50px;
+}
 
+#Portfolio {
+	visibility: hidden;
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+#Contact {
+	visibility: hidden;
+    margin-top: -50px;
+    padding-top: 25px;
+}
+
+footer {
+	background-color: #fff;
+	height: 50px;
+}
+
+footer i {
+	margin: 15px;
+	padding: 8px 8px 8px 8px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background-color: #e6f2ff;
+	color: #4da3ff;
+}
+
+.fa-facebook {
+	padding-left: 10px;
+	padding-right: 12px;
+}
