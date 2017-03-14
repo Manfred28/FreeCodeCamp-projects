@@ -6,7 +6,7 @@ function randomNum() {
 	return Math.floor((Math.random() * 3) +1 );
 }
 
-
+													//  *************** RANDOM ANIMATION ON WINDOW
 function chooseTrans () {
 	var number1 = randomNum();
 	if (number1 === 1) {
@@ -27,7 +27,6 @@ function transform (self) {
 	transType = chooseTrans()
 		self.style.transform = transType;
 		self.style.width = "0px";
-	console.log(transType);
 };
 
 function transformBack (self) {
@@ -47,4 +46,20 @@ function transformBack (self) {
 
 window.transform = transform;
 window.transformBack = transformBack;
+
+
+												// EVENTLISTENER STUFF
+
+window.addEventListener("keydown", function (a) {	
+	if (a.keyCode === 65) {
+		document.querySelector(".test3").classList.toggle("test3test");
+	}
+})
+
+window.addEventListener("keyup", function (a) {
+	if (a.keyCode === 65) {
+		document.querySelector(".test3").classList.remove("test3test");
+	}
+})
+
 })(window)

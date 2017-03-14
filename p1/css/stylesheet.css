@@ -246,3 +246,15 @@ body {
 
 	z-index: 2;
 }
+
+
+.test3 {
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	transition: color, 2s;
+}
+
+.test3test {
+	background-color: blue;
+}

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"header\tTag"
+			],
+			[
 				"text",
 				"text"
 			],
@@ -131,7 +135,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 5416,
+				"buffer_size": 5988,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -140,7 +144,7 @@
 			"file": "css/stylesheet.css",
 			"settings":
 			{
-				"buffer_size": 1416,
+				"buffer_size": 1745,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -212,7 +216,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -280,15 +284,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5416,
+						"buffer_size": 5988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								926,
-								926
+								1731,
+								1731
 							]
 						],
 						"settings":
@@ -299,7 +303,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -308,15 +312,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1416,
+						"buffer_size": 1745,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1170,
-								1170
+								143,
+								143
 							]
 						],
 						"settings":
@@ -355,7 +359,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
