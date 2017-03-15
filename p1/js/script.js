@@ -62,4 +62,26 @@ window.addEventListener("keyup", function (a) {
 	}
 })
 
+												// IDK JSON WITH JQUERY
+$(document).ready(function () {
+	$("#test5 ").click(function() {
+		$("#test4 > div").text("");  //clears any image / text currently in the box
+		var movieTitle = $("#movieTitle").val();
+		movieTitle = movieTitle.split(" ").join("+");
+		console.log(movieTitle);
+		$.getJSON("https://api.themoviedb.org/3/search/movie?api_key=fabab376626db9d67b0edc58f625e1f0&query=" + movieTitle, function(data) {
+			console.log(data);
+			if (data.results[0].poster_path === null){
+				$("#test4 > div").append("No Image Found")
+				return ;
+			} 
+			
+			$("#test4 > div").append("<img src='https://image.tmdb.org/t/p/w640" + data.results[0].poster_path + "'>");
+
+		})
+	})
+
+});
+
+
 })(window)
