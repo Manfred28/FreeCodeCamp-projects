@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"shad",
+				"box-shadow"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
 				"head",
 				"header\tTag"
 			],
@@ -57,10 +65,6 @@
 			],
 			[
 				"max-",
-				"max-width"
-			],
-			[
-				"max",
 				"max-width"
 			],
 			[
@@ -132,28 +136,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.html",
+			"file": "/C/Users/pisti/hello-world/WOTquotes.js",
 			"settings":
 			{
-				"buffer_size": 5988,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/stylesheet.css",
-			"settings":
-			{
-				"buffer_size": 1745,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/script.js",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 2271,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -192,11 +178,16 @@
 	"file_history":
 	[
 		"/C/Users/pisti/hello-world/p1/css/stylesheet.css",
+		"/C/Users/pisti/hello-world/p1/js/script.js",
 		"/C/Users/pisti/hello-world/p1/index.html",
+		"/C/Users/pisti/hello-world/p1/test.js",
+		"/C/Users/pisti/hello-world/p1/json/example.json",
+		"/C/Users/pisti/hello-world/portfolio/js/script.js",
+		"/C/Users/pisti/hello-world/portfolio/css/stylesheet.css",
+		"/C/Users/pisti/hello-world/portfolio/index.html",
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/assignment1-starter-code/js/app.js",
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/Assignment-1.md",
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/assignment1-starter-code/index.html",
-		"/C/Users/pisti/hello-world/p1/js/script.js",
 		"/C/Users/pisti/hello-world/module3-solution/css/bootstrap.css",
 		"/C/Users/pisti/hello-world/module3-solution/index.html",
 		"/C/Program Files (x86)/Steam/steamapps/common/Morphblade/https",
@@ -216,7 +207,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 21.0
 	},
 	"find_in_files":
 	{
@@ -275,80 +266,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
+					"file": "/C/Users/pisti/hello-world/WOTquotes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5988,
+						"buffer_size": 2271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1731,
-								1731
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "css/stylesheet.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1745,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/script.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								2,
+								2
 							]
 						],
 						"settings":
@@ -359,7 +294,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -367,7 +302,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -404,7 +339,7 @@
 	"project": "portfolio.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":
