@@ -136,10 +136,10 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/pisti/hello-world/WOTquotes.js",
+			"file": "/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
 			"settings":
 			{
-				"buffer_size": 2271,
+				"buffer_size": 2310,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -177,6 +177,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
+		"/C/Users/pisti/hello-world/WOTquotes.js",
 		"/C/Users/pisti/hello-world/p1/css/stylesheet.css",
 		"/C/Users/pisti/hello-world/p1/js/script.js",
 		"/C/Users/pisti/hello-world/p1/index.html",
@@ -271,24 +273,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/pisti/hello-world/WOTquotes.js",
+					"file": "/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2271,
+						"buffer_size": 2310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2,
-								2
+								2310,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
