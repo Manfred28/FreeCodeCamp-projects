@@ -136,12 +136,12 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
+			"file": "/C/Users/pisti/hello-world/localWeather/city.list.json",
 			"settings":
 			{
-				"buffer_size": 2310,
+				"buffer_size": 19188673,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -177,7 +177,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/pisti/hello-world/module3-solution/css/bootstrap.min.css",
+		"/C/Users/pisti/hello-world/module3-solution/css/bootstrap.css",
 		"/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
+		"/C/Users/pisti/Downloads/city.list.json.gz",
 		"/C/Users/pisti/hello-world/WOTquotes.js",
 		"/C/Users/pisti/hello-world/p1/css/stylesheet.css",
 		"/C/Users/pisti/hello-world/p1/js/script.js",
@@ -190,7 +193,6 @@
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/assignment1-starter-code/js/app.js",
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/Assignment-1.md",
 		"/C/Users/pisti/hello-world/fullstack-course5-module1-solution/assignment1-starter-code/index.html",
-		"/C/Users/pisti/hello-world/module3-solution/css/bootstrap.css",
 		"/C/Users/pisti/hello-world/module3-solution/index.html",
 		"/C/Program Files (x86)/Steam/steamapps/common/Morphblade/https",
 		"/C/Users/pisti/hello-world/module3-solution/css/stylesheet.css",
@@ -223,6 +225,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"btn",
 			"LunchCheck",
 			"elem[i]",
 			"post",
@@ -273,18 +276,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/pisti/hello-world/quotegen/WOTquotes.json",
+					"file": "/C/Users/pisti/hello-world/localWeather/city.list.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2310,
+						"buffer_size": 19188673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2310,
+								0,
 								0
 							]
 						],
@@ -293,7 +296,7 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 787973.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
