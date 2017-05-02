@@ -1,5 +1,6 @@
-
-
+:root {
+	--color1: black;
+}
 
 * {
 	margin: 0px;
@@ -12,6 +13,16 @@ body {
 }
 
 
+#test8 {
+	float: right;
+	background-color: var(--color1);
+	width: 200px;
+	height: 200px;
+}
+
+#test8:hover {
+	
+}
 
 @media (max-width: 969px) {
 	.col-sm-hide {

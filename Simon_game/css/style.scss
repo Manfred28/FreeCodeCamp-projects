@@ -1,0 +1,205 @@
+@import 'flexMixins';
+
+
+$outer-diameter: 300px;
+$outer-diameter-large: 600px;
+$inner-button-diameter: 12px;
+$inner-button-diameter-large: 30px;
+$round-counter-height: 25px;
+$round-counter-height-large: 50px;
+$font-size: 9px;
+$font-size-large: 20px;
+
+
+$outer-button-colors: #0f53c1, #aa1212, #13b528, #e5d609; //blue, red, green, yellow   //might be too dark
+$outer-button-positions: (1: (top: 0%, left: 50%), 2: (top: 50%, left: 50%), 
+						  3: (top: 50%, left: 0%), 4: (top: 0%, left: 0%)); //top, left
+
+
+@mixin radial-gradient($from, $from-percent, $to, $to-percent) {
+	background: -moz-radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($from-percent, $from), color-stop($to-percent, $to));
+	background: -webkit-radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
+	background: -o-radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
+	background: -ms-radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
+	background: radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
+	background-color: $from;
+}
+
+@mixin background($url, $default) {
+  background-color:  $default;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform:    $transform;
+  -ms-transform:     $transform;
+  -o-transform:      $transform;
+  transform:         $transform;
+}
+
+@mixin border($top, $right, $bottom, $left, $style, $color) {
+	border-top: $top $style $color;
+	border-right: $right $style $color;
+	border-bottom: $bottom $style $color;
+	border-left: $left $style $color;
+}
+
+@mixin large-version() { // from medium screens upwards
+	@media screen and (min-width: 768px) {
+		@content
+	}
+}
+
+
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body {
+	@include background("images/background.jpg", #dbc5a0);
+	> .container {
+		@include flexbox;
+		@include justify-content(center);
+	}
+}
+
+button:focus {
+	outline: none;
+}
+
+#outer-circle {
+	margin-top: 30px;
+	position: relative;
+	border-radius: 100%;
+	height: $outer-diameter;
+	width: $outer-diameter;
+	@include large-version {
+		height: $outer-diameter-large;
+		width: $outer-diameter-large;
+		}
+	> button {
+		@include border(15px, 15px, 5px, 5px, solid, #404040);
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		border-radius: 0% 100% 0% 0%;
+	}
+
+	@for $i from 1 through 4 {
+		> button:nth-child(#{$i}) {
+			@include transform(rotate(90deg * ($i - 1)));
+			top: map-get(map-get($outer-button-positions, $i), top);
+			left: map-get(map-get($outer-button-positions, $i), left);
+			background-color: nth($outer-button-colors, $i);
+		}
+	}
+}
+
+#inner-circle {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	@include align-content(space-around);
+	@include border(5px, 5px, 5px, 5px, solid, #404040);
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	border-radius: 100%;
+	background-color: #cccccc;
+	.row {
+		@include flexbox;
+		@include justify-content(space-around);
+		font-size: $font-size;
+		@include large-version {
+			font-size: $font-size-large;
+		}
+		#round-counter {
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+				@include border(4px, 4px, 4px, 4px, solid, #404040);
+				color: white;
+				width: 100%;
+				height: $round-counter-height; 
+				margin-top: -($round-counter-height - $inner-button-diameter);
+				margin-bottom: 5px;	
+				border-radius: 10px;
+				background-color: #4d0000;
+				color: #ff0000;
+			@include large-version {
+				height: $round-counter-height-large; 
+				margin-top: -($round-counter-height-large - $inner-button-diameter-large); // height - button height
+				margin-bottom: 5px;	
+			}
+			
+			
+		}
+		button {
+			display: block;
+			border-radius: 100%;
+			width: $inner-button-diameter;
+			height: $inner-button-diameter;
+			margin-bottom: 5px;
+			margin-left: $font-size;
+			@include large-version {	
+				width: $inner-button-diameter-large;
+				height: $inner-button-diameter-large;
+				margin-left: $font-size-large;
+			}
+				
+		}
+	}
+	.row:nth-child(1) {
+		margin-left: -3px;
+		margin-top: 10px;
+		font-size: $font-size * 3.5;
+		@include large-version {
+			margin-top: 20px;
+			font-size: $font-size-large * 3.5;
+		}
+	}
+}
+
+.strict-on {
+	border: none;
+	@include radial-gradient(#23db4b, 0%, #13bf00, 44%);
+}
+
+.strict-off {
+	border: none;
+	@include radial-gradient(#db2323, 0%, #bf0000, 44%);
+}
+
+#button-sounds {
+	display: none;
+}
+
+/* utilities */
+
+
+.row {
+	position: relative;
+	width: 100%;
+	> div {
+	display: inline-block;
+	}	
+
+
+}

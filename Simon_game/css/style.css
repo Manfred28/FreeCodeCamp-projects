@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  background-color: #dbc5a0;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  body > .container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+
+button:focus {
+  outline: none; }
+
+#outer-circle {
+  margin-top: 30px;
+  position: relative;
+  border-radius: 100%;
+  height: 300px;
+  width: 300px; }
+  @media screen and (min-width: 768px) {
+    #outer-circle {
+      height: 600px;
+      width: 600px; } }
+  #outer-circle > button {
+    border-top: 15px solid #404040;
+    border-right: 15px solid #404040;
+    border-bottom: 5px solid #404040;
+    border-left: 5px solid #404040;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 0% 100% 0% 0%; }
+  #outer-circle > button:nth-child(1) {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0%;
+    left: 50%;
+    background-color: #0f53c1; }
+  #outer-circle > button:nth-child(2) {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 50%;
+    left: 50%;
+    background-color: #aa1212; }
+  #outer-circle > button:nth-child(3) {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 50%;
+    left: 0%;
+    background-color: #13b528; }
+  #outer-circle > button:nth-child(4) {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    top: 0%;
+    left: 0%;
+    background-color: #e5d609; }
+
+#inner-circle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  -ms-align-content: space-around;
+  align-content: space-around;
+  border-top: 5px solid #404040;
+  border-right: 5px solid #404040;
+  border-bottom: 5px solid #404040;
+  border-left: 5px solid #404040;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border-radius: 100%;
+  background-color: #cccccc; }
+  #inner-circle .row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    font-size: 9px; }
+    @media screen and (min-width: 768px) {
+      #inner-circle .row {
+        font-size: 20px; } }
+    #inner-circle .row #round-counter {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      border-top: 4px solid #404040;
+      border-right: 4px solid #404040;
+      border-bottom: 4px solid #404040;
+      border-left: 4px solid #404040;
+      color: white;
+      width: 100%;
+      height: 25px;
+      margin-top: -13px;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      background-color: #4d0000;
+      color: #ff0000; }
+      @media screen and (min-width: 768px) {
+        #inner-circle .row #round-counter {
+          height: 50px;
+          margin-top: -20px;
+          margin-bottom: 5px; } }
+    #inner-circle .row button {
+      display: block;
+      border-radius: 100%;
+      width: 12px;
+      height: 12px;
+      margin-bottom: 5px;
+      margin-left: 9px; }
+      @media screen and (min-width: 768px) {
+        #inner-circle .row button {
+          width: 30px;
+          height: 30px;
+          margin-left: 20px; } }
+  #inner-circle .row:nth-child(1) {
+    margin-left: -3px;
+    margin-top: 10px;
+    font-size: 31.5px; }
+    @media screen and (min-width: 768px) {
+      #inner-circle .row:nth-child(1) {
+        margin-top: 20px;
+        font-size: 70px; } }
+
+.strict-on {
+  border: none;
+  background: -moz-radial-gradient(center, circle cover, #23db4b 0%, #13bf00 44%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #23db4b), color-stop(44%, #13bf00));
+  background: -webkit-radial-gradient(center, circle cover, #23db4b 0%, #13bf00 44%);
+  background: -o-radial-gradient(center, circle cover, #23db4b 0%, #13bf00 44%);
+  background: -ms-radial-gradient(center, circle cover, #23db4b 0%, #13bf00 44%);
+  background: radial-gradient(center, circle cover, #23db4b 0%, #13bf00 44%);
+  background-color: #23db4b; }
+
+.strict-off {
+  border: none;
+  background: -moz-radial-gradient(center, circle cover, #db2323 0%, #bf0000 44%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #db2323), color-stop(44%, #bf0000));
+  background: -webkit-radial-gradient(center, circle cover, #db2323 0%, #bf0000 44%);
+  background: -o-radial-gradient(center, circle cover, #db2323 0%, #bf0000 44%);
+  background: -ms-radial-gradient(center, circle cover, #db2323 0%, #bf0000 44%);
+  background: radial-gradient(center, circle cover, #db2323 0%, #bf0000 44%);
+  background-color: #db2323; }
+
+#button-sounds {
+  display: none; }
+
+/* utilities */
+.row {
+  position: relative;
+  width: 100%; }
+  .row > div {
+    display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */
