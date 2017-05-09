@@ -2,6 +2,7 @@
 
 /* TODO:
 
+mobile is fucked up
 box-shadow
 
 */
@@ -89,7 +90,6 @@ window.addEventListener("load", function() {
 			i++;
 			if (i === roundCounter) {
 				gamePhase = "sequence-input";
-				console.log(gamePhase);
 				clearInterval(playSequence)		
 			}; 
 		}, OUTER_BUTTON_CLICK_TIMEOUT + 200)
@@ -144,6 +144,7 @@ window.addEventListener("load", function() {
 	}
 
 	function startGame () {
+		clearInterval(playSequence);
 		currentSequence = [];
 		fullSequence = [];
 		roundCounter = 0;

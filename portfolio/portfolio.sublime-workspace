@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getElementById"
+			],
+			[
 				"text",
 				"roundCounterFlashText"
 			],
@@ -164,49 +168,12 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/pisti/hello-world/Simon_game/css/style.scss",
+			"file": "/C/Users/pisti/html stuff/angular-playground/.eslintrc.json",
 			"settings":
 			{
-				"buffer_size": 5219,
+				"buffer_size": 445,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "// --------------------------------------------------\n// Flexbox SASS mixins\n// The spec: http://www.w3.org/TR/css3-flexbox\n// --------------------------------------------------\n//from https://gist.github.com/richardtorres314/26b18e12958ba418bb37993fdcbfc1bd\n\n// Flexbox display\n@mixin flexbox() {\n  display: -webkit-box;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: -webkit-flex;\n  display: flex;\n}\n\n// The 'flex' shorthand\n// - applies to: flex items\n// <positive-number>, initial, auto, or none\n@mixin flex($values) {\n  -webkit-box-flex: $values;\n     -moz-box-flex: $values;\n      -webkit-flex: $values;\n  \t  -ms-flex: $values;\n  \t      flex: $values;\n}\n\n// Flex Flow Direction\n// - applies to: flex containers\n// row | row-reverse | column | column-reverse\n@mixin flex-direction($direction) {\n  -webkit-flex-direction: $direction;\n     -moz-flex-direction: $direction;\n      -ms-flex-direction: $direction;\n          flex-direction: $direction;\n}\n\n// Flex Line Wrapping\n// - applies to: flex containers\n// nowrap | wrap | wrap-reverse\n@mixin flex-wrap($wrap) {\n  -webkit-flex-wrap: $wrap;\n     -moz-flex-wrap: $wrap;\n      -ms-flex-wrap: $wrap;\n          flex-wrap: $wrap;\n}\n\n// Flex Direction and Wrap\n// - applies to: flex containers\n// <flex-direction> || <flex-wrap>\n@mixin flex-flow($flow) {\n  -webkit-flex-flow: $flow;\n     -moz-flex-flow: $flow;\n      -ms-flex-flow: $flow;\n          flex-flow: $flow;\n}\n\n// Display Order\n// - applies to: flex items\n// <integer>\n@mixin order($val) {\n  -webkit-box-ordinal-group: $val;  \n     -moz-box-ordinal-group: $val;     \n  \t     -ms-flex-order: $val;     \n  \t      -webkit-order: $val;  \n  \t\t      order: $val;\n}\n\n// Flex grow factor\n// - applies to: flex items\n// <number>\n@mixin flex-grow($grow) {\n  -webkit-flex-grow: $grow;\n     -moz-flex-grow: $grow;\n      -ms-flex-grow: $grow;\n          flex-grow: $grow;\n}\n\n// Flex shrink\n// - applies to: flex item shrink factor\n// <number> \n@mixin flex-shrink($shrink) {\n  -webkit-flex-shrink: $shrink;\n     -moz-flex-shrink: $shrink;\n      -ms-flex-shrink: $shrink;\n          flex-shrink: $shrink;\n}\n\n// Flex basis\n// - the initial main size of the flex item\n// - applies to: flex itemsnitial main size of the flex item\n// <width> \n@mixin flex-basis($width) {\n  -webkit-flex-basis: $width;\n     -moz-flex-basis: $width;\n      -ms-flex-basis: $width;\n          flex-basis: $width;\n}\n\n// Axis Alignment\n// - applies to: flex containers\n// flex-start | flex-end | center | space-between | space-around \n@mixin justify-content($justify) {\n  -webkit-justify-content: $justify;\n     -moz-justify-content: $justify;\n      -ms-justify-content: $justify;\n          justify-content: $justify;\n            -ms-flex-pack: $justify;\n}\n\n// Packing Flex Lines\n// - applies to: multi-line flex containers\n// flex-start | flex-end | center | space-between | space-around | stretch \n@mixin align-content($align) {\n  -webkit-align-content: $align;\n     -moz-align-content: $align;\n      -ms-align-content: $align;\n          align-content: $align;\n}\n\n// Cross-axis Alignment\n// - applies to: flex containers\n// flex-start | flex-end | center | baseline | stretch \n@mixin align-items($align) {\n  -webkit-align-items: $align;\n     -moz-align-items: $align;\n      -ms-align-items: $align;\n          align-items: $align;\n}\n\n// Cross-axis Alignment\n// - applies to: flex items\n// auto | flex-start | flex-end | center | baseline | stretch \n@mixin align-self($align) {\n  -webkit-align-self: $align;\n     -moz-align-self: $align;\n      -ms-align-self: $align;\n          align-self: $align;\n}",
-			"file": "/C/Users/pisti/hello-world/Simon_game/css/mixins.scss",
-			"file_size": 3708,
-			"file_write_time": 131377022592578209,
-			"settings":
-			{
-				"buffer_size": 3571,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/pisti/hello-world/Simon_game/css/style.css",
-			"settings":
-			{
-				"buffer_size": 6803,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/pisti/hello-world/Simon_game/index.html",
-			"settings":
-			{
-				"buffer_size": 1280,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/pisti/hello-world/Simon_game/js/script.js",
-			"settings":
-			{
-				"buffer_size": 5172,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -247,7 +214,13 @@
 	"file_history":
 	[
 		"/C/Users/pisti/hello-world/Simon_game/css/style.scss",
+		"/C/Users/pisti/hello-world/Simon_game/css/style.css",
 		"/C/Users/pisti/hello-world/Simon_game/css/stylesheet.css",
+		"/C/Users/pisti/html stuff/angular-playground/index.html",
+		"/C/Users/pisti/html stuff/angular-playground/js/script.js",
+		"/C/Users/pisti/hello-world/Simon_game/css/mixins.scss",
+		"/C/Users/pisti/hello-world/Simon_game/index.html",
+		"/C/Users/pisti/hello-world/Simon_game/js/script.js",
 		"/C/Users/pisti/hello-world/p1/index.html",
 		"/C/Users/pisti/hello-world/Simon game/css/style.scss",
 		"/C/Users/pisti/hello-world/Simon game/js/script.js",
@@ -307,6 +280,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"left",
+			"background",
+			"url",
+			"#404040",
+			"show-sequence",
+			"sequence-input",
+			"roundCounterFlashText",
+			"colorIndex",
+			"nodeListToArray",
 			"rounds",
 			"resetSequence",
 			"border",
@@ -359,6 +341,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$default-border-color",
+			"buttonIndex",
+			"toArray",
 			"maxRounds",
 			"sequenceMistake",
 			"outerButtonsClickColor",
@@ -384,151 +369,35 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/pisti/hello-world/Simon_game/css/style.scss",
+					"file": "/C/Users/pisti/html stuff/angular-playground/.eslintrc.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5219,
+						"buffer_size": 445,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4944,
-								4944
+								89,
+								89
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3968.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/pisti/hello-world/Simon_game/css/mixins.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3571,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								977,
-								980
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 401.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/pisti/hello-world/Simon_game/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6803,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 92.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/pisti/hello-world/Simon_game/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1280,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								979,
-								979
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 414.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/pisti/hello-world/Simon_game/js/script.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								70,
-								70
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

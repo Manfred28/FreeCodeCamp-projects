@@ -5,15 +5,15 @@ $outer-diameter: 300px;
 $outer-diameter-large: 600px;
 $inner-button-diameter: 12px;
 $inner-button-diameter-large: 30px;
-$round-counter-height: 25px;
+$round-counter-height: 30px;
 $round-counter-height-large: 50px;
-$font-size: 9px;
-$font-size-large: 20px;
+$font-size: 8px;
+$font-size-large: 19px;
+$default-border-color: #404040;
 
-
-$outer-button-colors: #0f53c1, #aa1212, #13b528, #e5d609; //blue, red, green, yellow   //might be too dark
+$outer-button-colors: #0f53c1, #aa1212, #13b528, #e5d609; //blue, red, green, yellow  
 $outer-button-positions: (1: (top: 0%, left: 50%), 2: (top: 50%, left: 50%), 
-						  3: (top: 50%, left: 0%), 4: (top: 0%, left: 0%)); //top, left
+						  3: (top: 50%, left: 0%), 4: (top: 0%, left: 0%)); 
 
 
 @mixin radial-gradient($from, $from-percent, $to, $to-percent) {
@@ -26,8 +26,8 @@ $outer-button-positions: (1: (top: 0%, left: 50%), 2: (top: 50%, left: 50%),
 	background-color: $from;
 }
 
-@mixin background($url, $default) {
-  background-color:  $default;
+@mixin background($url, $default-color) {
+  background-color:  $default-color;
   background-image: url($url);
   background-repeat: no-repeat;
   background-position: center center;
@@ -69,6 +69,10 @@ $outer-button-positions: (1: (top: 0%, left: 50%), 2: (top: 50%, left: 50%),
 	padding: 0px;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
 
 body {
 	@include background("images/background.jpg", #dbc5a0);
@@ -93,16 +97,16 @@ button:focus {
 		width: $outer-diameter-large;
 		}
 	> button {
-		@include border(15px, 15px, 5px, 5px, solid, #404040);
+		@include border(20px, 20px, 5px, 5px, solid, $default-border-color);
 		position: absolute;
 		width: 50%;
 		height: 50%;
-		border-radius: 0% 100% 0% 0%;
+		border-top-right-radius: 100%;
 	}
 
 	@for $i from 1 through 4 {
 		> button:nth-child(#{$i}) {
-			@include transform(rotate(90deg * ($i - 1)));
+			@include transform(rotate(90deg * ($i - 1) + 0.001));  // the 0.01 offset is required because of Chrome for Android 57 weirdness
 			top: map-get(map-get($outer-button-positions, $i), top);
 			left: map-get(map-get($outer-button-positions, $i), left);
 			background-color: nth($outer-button-colors, $i);
@@ -115,7 +119,7 @@ button:focus {
 	@include flex-wrap(wrap);
 	@include justify-content(space-between);
 	@include align-content(space-around);
-	@include border(5px, 5px, 5px, 5px, solid, #404040);
+	@include border(5px, 5px, 5px, 5px, solid, $default-border-color);
 	width: 50%;
 	height: 50%;
 	position: absolute;
@@ -134,7 +138,7 @@ button:focus {
 				@include flexbox;
 				@include justify-content(center);
 				@include align-items(center);
-				@include border(4px, 4px, 4px, 4px, solid, #404040);
+				@include border(4px, 4px, 4px, 4px, solid, $default-border-color);
 				color: white;
 				width: 100%;
 				height: $round-counter-height; 
@@ -156,8 +160,8 @@ button:focus {
 			border-radius: 100%;
 			width: $inner-button-diameter;
 			height: $inner-button-diameter;
-			margin-bottom: 5px;
 			margin-left: $font-size;
+			margin-bottom: 5px;
 			@include large-version {	
 				width: $inner-button-diameter-large;
 				height: $inner-button-diameter-large;
@@ -167,10 +171,12 @@ button:focus {
 		}
 	}
 	.row:nth-child(1) {
-		margin-left: -3px;
-		margin-top: 10px;
+		font-family: 'Courgette', cursive;
+		margin-left: -5px;
+		margin-top: 5px;
 		font-size: $font-size * 3.5;
 		@include large-version {
+			margin-left: -10px;
 			margin-top: 20px;
 			font-size: $font-size-large * 3.5;
 		}
@@ -178,12 +184,12 @@ button:focus {
 }
 
 .strict-on {
-	border: none;
+	@include border(1px, 1px, 1px, 1px, solid, $default-border-color);
 	@include radial-gradient(#23db4b, 0%, #13bf00, 44%);
 }
 
 .strict-off {
-	border: none;
+	@include border(1px, 1px, 1px, 1px, solid, $default-border-color);
 	@include radial-gradient(#db2323, 0%, #bf0000, 44%);
 }
 
