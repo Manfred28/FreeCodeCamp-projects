@@ -1,0 +1,85 @@
+$main-color1: lightblue;
+$main-color2: blue;
+$background-main: white;
+
+
+
+body {
+	background-color: $background-main;
+}
+
+.timeline ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px;
+	&:before {
+		//  Creates the line in the middle
+		content: "";
+		position: absolute;
+		left: 50%;
+		background-color: $main-color2;
+		width: 4px;
+		height: 89%;
+		transform: translate(-50%, 2%);
+	}
+	li {
+		list-style-type: none;
+		width: 100%;
+		position: relative;
+		margin-bottom: 10px;
+		.icon-container {
+			position: absolute;
+			left: 50%;
+			top: calc(45% - 10px);
+			transform: translate(-50%, 0);
+			border-radius: 100%;
+			background-color: $main-color2;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			padding-top: 2px;
+			span {
+				color: white;
+			}
+		}
+		.timeline-content {
+			width: calc(50% - 35px); // the -num px determines the distance between the element and the line in the middle
+			background-color: $main-color1;
+			text-align: center;
+			border-radius: 10px;
+			padding: 5px 5px;
+			&:after {
+				content: "";
+				display:block;
+				width:0;
+				height:0;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				position: absolute;
+			}
+		}
+		&:nth-child(even) .timeline-content{
+			//
+			margin-left: auto;
+			transform: translate(0, 0);
+			&:after {
+				left: -3px;
+				top: 45%;
+				border-right:4px solid black;
+			}
+		}
+		&:nth-child(odd) .timeline-content{
+			margin-right: auto;
+			transform: translate(0, 0);
+			&:after {
+				right: -3px;
+				top: 45%;
+				border-left:4px solid black;
+			}
+		}
+	}
+}
+
+.timeline h2 {
+	font-size: 20px;
+}
