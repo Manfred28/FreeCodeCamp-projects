@@ -2,6 +2,19 @@ $main-color1: lightblue;
 $main-color2: blue;
 $background-main: white;
 
+@mixin breakpoint($size) {
+	@if $size == small {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+	@else if $size == medium {
+		@media screen and (min-width: 768px) {
+			@content
+		}
+	}
+}
+
 
 
 body {
@@ -9,6 +22,7 @@ body {
 }
 
 .timeline ul {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0px;
@@ -19,8 +33,13 @@ body {
 		left: 50%;
 		background-color: $main-color2;
 		width: 4px;
-		height: 89%;
+		height: calc(100% - 50px);
 		transform: translate(-50%, 2%);
+	}
+	@include breakpoint(small) {
+		&:before {
+			left: 0%;
+		}
 	}
 	li {
 		list-style-type: none;
@@ -38,12 +57,18 @@ body {
 			height: 30px;
 			text-align: center;
 			padding-top: 2px;
+			@include breakpoint(small) {
+				left: 0%;
+				transform: translate(-50%, 0);
+			}
 			span {
 				color: white;
 			}
 		}
-		.timeline-content {
+		.timeline-content { //even elements are not styled separately, they are the default
 			width: calc(50% - 35px); // the -num px determines the distance between the element and the line in the middle
+			margin-left: auto;
+			transform: translate(0, 0);
 			background-color: $main-color1;
 			text-align: center;
 			border-radius: 10px;
@@ -55,26 +80,52 @@ body {
 				height:0;
 				border-top: 4px solid transparent;
 				border-bottom: 4px solid transparent;
+				border-right:4px solid black;
+				border-left: none;
 				position: absolute;
-			}
-		}
-		&:nth-child(even) .timeline-content{
-			//
-			margin-left: auto;
-			transform: translate(0, 0);
-			&:after {
 				left: -3px;
 				top: 45%;
-				border-right:4px solid black;
+			}
+			@include breakpoint(small) {
+				margin-left: 30px;
+				margin-right: 0px;
+				width: 100%;
+				&:after { // should be improved
+					left: auto;
+					left: -3px;
+					top: 45%;
+					border-right: none;
+					border-top: 4px solid transparent;
+					border-bottom: 4px solid transparent;
+					border-left: none;
+					border-right: 4px solid black;
+				}
 			}
 		}
 		&:nth-child(odd) .timeline-content{
 			margin-right: auto;
+			margin-left: 0px;
 			transform: translate(0, 0);
 			&:after {
-				right: -3px;
+				left: 100%;
 				top: 45%;
 				border-left:4px solid black;
+				border-right: none;
+			}
+			@include breakpoint(small) {
+				margin-left: 30px;
+				margin-right: 0px;
+				width: 100%;
+				&:after { // should be improved
+					left: auto;
+					left: -3px;
+					top: 45%;
+					border-right: none;
+					border-top: 4px solid transparent;
+					border-bottom: 4px solid transparent;
+					border-left: none;
+					border-right: 4px solid black;
+				}
 			}
 		}
 	}
