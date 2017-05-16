@@ -1,6 +1,27 @@
+/*
+TO DO:
+Clear up code, jesus
+Try to implement layout with map, make code more sassy
+
+Style the longer description
+Style footer
+Come up with color scheme
+Add transitions where possible
+Keep an eye out for border shadow and tiny borders
+Use different font families
+Make picture into thumbnail?
+
+Mention somewhere that most of this is from wikipedia
+Possibly add a section showing some of his works, possibly a longer quote that can be hidden?
+Possibly add navbar
+*/
+
 $main-color1: lightblue;
 $main-color2: blue;
 $background-main: white;
+
+$header-vertical-margin: 25px;
+$book-overlay-text-margin: 6px;
 
 @mixin breakpoint($size) {
 	@if $size == small {
@@ -16,9 +37,25 @@ $background-main: white;
 }
 
 
+* {
+	margin: 0px;
+	padding: 0px;
+}
 
 body {
-	background-color: $background-main;
+	background: $background-main;
+}
+
+h1 {
+	margin-top: $header-vertical-margin;
+	margin-bottom: $header-vertical-margin;
+}
+
+h2 {
+	font-size: 20px;
+	text-align: center;
+	margin-top: $header-vertical-margin;
+	margin-bottom: $header-vertical-margin;
 }
 
 .timeline ul {
@@ -65,43 +102,6 @@ body {
 				color: white;
 			}
 		}
-		.timeline-content { //even elements are not styled separately, they are the default
-			width: calc(50% - 35px); // the -num px determines the distance between the element and the line in the middle
-			margin-left: auto;
-			transform: translate(0, 0);
-			background-color: $main-color1;
-			text-align: center;
-			border-radius: 10px;
-			padding: 5px 5px;
-			&:after {
-				content: "";
-				display:block;
-				width:0;
-				height:0;
-				border-top: 4px solid transparent;
-				border-bottom: 4px solid transparent;
-				border-right:4px solid black;
-				border-left: none;
-				position: absolute;
-				left: -3px;
-				top: 45%;
-			}
-			@include breakpoint(small) {
-				margin-left: 30px;
-				margin-right: 0px;
-				width: 100%;
-				&:after { // should be improved
-					left: auto;
-					left: -3px;
-					top: 45%;
-					border-right: none;
-					border-top: 4px solid transparent;
-					border-bottom: 4px solid transparent;
-					border-left: none;
-					border-right: 4px solid black;
-				}
-			}
-		}
 		&:nth-child(odd) .timeline-content{
 			margin-right: auto;
 			margin-left: 0px;
@@ -128,9 +128,94 @@ body {
 				}
 			}
 		}
+		.timeline-content { //even elements are not styled separately, they are the default
+			width: calc(50% - 35px); // the -x px determines the distance between the element and the line in the middle when in large view
+			margin-left: auto;
+			transform: translate(0, 0);
+			background-color: $main-color1;
+			text-align: center;
+			border-radius: 10px;
+			padding: 5px 5px;
+			&:after {
+				content: "";
+				display:block;
+				width:0;
+				height:0;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				border-right:4px solid black;
+				border-left: none;
+				position: absolute;
+				left: -3px;
+				top: 45%;
+			}
+			@include breakpoint(small) { // unfortunately, duplicated below
+				margin-left: 30px;
+				margin-right: 0px;
+				width: 100%;
+				&:after { // repetition should be avoided if possible
+					left: auto;
+					left: -3px;
+					top: 45%;
+					border-right: none;
+					border-top: 4px solid transparent;
+					border-bottom: 4px solid transparent;
+					border-left: none;
+					border-right: 4px solid black;
+				}
+			}
+		}
 	}
 }
 
-.timeline h2 {
-	font-size: 20px;
+.book-showcase {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	li {
+		position: relative;
+		width: 128px;
+		height: 208px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: scroll;
+		background-size: cover;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		margin-left: 5px;
+		.book-overlay {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.8);
+			color: white;
+			.book-title {
+				margin-top: $book-overlay-text-margin * 2;
+				font-size: 10px;
+				font-weight: 700;
+				text-align: center;
+			}
+			.book-desc {
+				margin-right: $book-overlay-text-margin;
+				margin-left: $book-overlay-text-margin;
+				font-size: 10px;
+			}
+			.publication-date {
+				position: absolute;
+				bottom: $book-overlay-text-margin;
+				right: $book-overlay-text-margin;
+				font-size: 10px;
+				//float: right;
+			}
+		}
+		&:hover .book-overlay {
+			display: inline-block;
+		}
+	}
 }
