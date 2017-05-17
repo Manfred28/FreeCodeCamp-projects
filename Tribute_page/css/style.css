@@ -26,11 +26,30 @@ h1 {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-h2 {
-  font-size: 20px;
-  text-align: center;
+.section-title {
   margin-top: 25px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section-title:before, .section-title:after {
+    display: block;
+    content: '';
+    height: 2px;
+    background-color: black;
+    flex-grow: 1; }
+    @media (max-width: 767px) {
+      .section-title:before, .section-title:after {
+        display: none; } }
+  .section-title:before {
+    margin-left: -30px; }
+  .section-title:after {
+    margin-right: -30px; }
+  .section-title h2 {
+    text-align: center;
+    display: block;
+    margin: 0 10px;
+    max-width: 75%; }
 
 .timeline ul {
   position: relative;
@@ -45,7 +64,7 @@ h2 {
     width: 4px;
     height: calc(100% - 50px);
     transform: translate(-50%, 2%); }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .timeline ul:before {
       left: 0%; } }
   .timeline ul li {
@@ -64,7 +83,7 @@ h2 {
       height: 30px;
       text-align: center;
       padding-top: 2px; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .timeline ul li .icon-container {
           left: 0%;
           transform: translate(-50%, 0); } }
@@ -79,7 +98,7 @@ h2 {
         top: 45%;
         border-left: 4px solid black;
         border-right: none; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .timeline ul li:nth-child(odd) .timeline-content {
           margin-left: 30px;
           margin-right: 0px;
@@ -113,7 +132,7 @@ h2 {
         position: absolute;
         left: -3px;
         top: 45%; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .timeline ul li .timeline-content {
           margin-left: 30px;
           margin-right: 0px;

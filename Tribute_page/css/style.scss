@@ -25,7 +25,7 @@ $book-overlay-text-margin: 6px;
 
 @mixin breakpoint($size) {
 	@if $size == small {
-		@media (max-width: 768px) {
+		@media (max-width: 767px) {
 			@content;
 		}
 	}
@@ -51,12 +51,37 @@ h1 {
 	margin-bottom: $header-vertical-margin;
 }
 
-h2 {
-	font-size: 20px;
-	text-align: center;
+.section-title {
 	margin-top: $header-vertical-margin;
 	margin-bottom: $header-vertical-margin;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:before, &:after {
+		display: block;
+		content: '';
+    height: 2px;
+    background-color: black;
+    flex-grow: 1;
+		@include breakpoint(small) {
+			display: none;
+		}
+	}
+	&:before {
+		margin-left: -30px;
+	}
+	&:after {
+		margin-right: -30px;
+	}
+	h2 {
+		text-align: center;
+		display: block;
+		margin: 0 10px;
+		max-width: 75%;
+	}
 }
+
+
 
 .timeline ul {
 	position: relative;
