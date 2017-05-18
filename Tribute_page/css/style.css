@@ -9,23 +9,28 @@ Come up with color scheme
 Add transitions where possible
 Keep an eye out for border shadow and tiny borders
 Use different font families
-Make picture into thumbnail?
+Make picture into thumbnail / card?
 
 Mention somewhere that most of this is from wikipedia
-Possibly add a section showing some of his works, possibly a longer quote that can be hidden?
-Possibly add navbar
+Add links to books
+USE MIXINS WHERE APPROPRIATE
 */
 * {
   margin: 0px;
   padding: 0px; }
 
 body {
+  padding-top: 35px;
   display: block;
   background-color: #E3D4AD;
   background-image: url("/img/background-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.navbar {
+  background-color: #E3D4AD;
+  border-bottom: 1px solid black; }
 
 h1 {
   color: #4d1200;
@@ -41,8 +46,8 @@ h1 {
   .section-title:before, .section-title:after {
     display: block;
     content: '';
-    height: 2px;
-    background-color: black;
+    height: 4px;
+    background-color: #4d1200;
     flex-grow: 1; }
     @media (max-width: 767px) {
       .section-title:before, .section-title:after {
@@ -103,7 +108,7 @@ h1 {
       .timeline ul li:nth-child(odd) .timeline-content:after {
         left: 100%;
         top: 45%;
-        border-left: 4px solid black;
+        border-left: 4px solid #4d1200;
         border-right: none; }
       @media (max-width: 767px) {
         .timeline ul li:nth-child(odd) .timeline-content {
@@ -112,13 +117,13 @@ h1 {
           width: 100%; }
           .timeline ul li:nth-child(odd) .timeline-content:after {
             left: auto;
-            left: -5px;
+            left: -4px;
             top: 45%;
             border-right: none;
             border-top: 4px solid transparent;
             border-bottom: 4px solid transparent;
             border-left: none;
-            border-right: 4px solid black; } }
+            border-right: 4px solid #4d1200; } }
     .timeline ul li .timeline-content {
       width: calc(50% - 35px);
       margin-left: auto;
@@ -134,10 +139,10 @@ h1 {
         height: 0;
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
-        border-right: 4px solid black;
+        border-right: 4px solid #4d1200;
         border-left: none;
         position: absolute;
-        left: -5px;
+        left: -4px;
         top: 45%; }
       @media (max-width: 767px) {
         .timeline ul li .timeline-content {
@@ -146,13 +151,13 @@ h1 {
           width: 100%; }
           .timeline ul li .timeline-content:after {
             left: auto;
-            left: -5px;
+            left: -4px;
             top: 45%;
             border-right: none;
             border-top: 4px solid transparent;
             border-bottom: 4px solid transparent;
             border-left: none;
-            border-right: 4px solid black; } }
+            border-right: 4px solid #4d1200; } }
 
 .book-showcase {
   list-style: none;
@@ -163,24 +168,24 @@ h1 {
     position: relative;
     width: 128px;
     height: 208px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
-    background-size: cover;
     margin-bottom: 5px;
     margin-right: 5px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    overflow: hidden; }
     .book-showcase li .book-overlay {
-      display: none;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
+      opacity: 0;
       width: 100%;
-      height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
-      color: white; }
+      color: white;
+      -moz-transition: opacity 0.8s;
+      -o-transition: opacity 0.8s;
+      -webkit-transition: opacity 0.8s;
+      transition: opacity 0.8s; }
       .book-showcase li .book-overlay .book-title {
         margin-top: 12px;
         font-size: 10px;
@@ -196,6 +201,20 @@ h1 {
         right: 6px;
         font-size: 10px; }
     .book-showcase li:hover .book-overlay {
-      display: inline-block; }
+      opacity: 100; }
+    .book-showcase li img {
+      -moz-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      -webkit-transition: all 0.8s;
+      transition: all 0.8s; }
+    .book-showcase li:hover img {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
+
+footer {
+  border: 1px solid #E3D4AD; }
 
 /*# sourceMappingURL=style.css.map */

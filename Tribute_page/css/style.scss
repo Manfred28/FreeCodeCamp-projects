@@ -9,16 +9,20 @@ Come up with color scheme
 Add transitions where possible
 Keep an eye out for border shadow and tiny borders
 Use different font families
-Make picture into thumbnail?
+Make picture into thumbnail / card?
 
 Mention somewhere that most of this is from wikipedia
-Possibly add a section showing some of his works, possibly a longer quote that can be hidden?
-Possibly add navbar
+Add links to books
+USE MIXINS WHERE APPROPRIATE
 */
+
+@import 'mixins';
 
 $main-color1: #ffece6;
 $main-color2: #4d1200;
-//$background-main: white;
+$background-default: #E3D4AD;
+$navbar-color: #E3D4AD;
+
 
 $header-vertical-margin: 25px;
 $book-overlay-text-margin: 6px;
@@ -45,12 +49,18 @@ $book-overlay-text-margin: 6px;
 
 body {
 	//height: 100%;
+	padding-top: 35px;
 	display:block;
-	background-color: #E3D4AD;
+	background-color: $background-default;
 	background-image: url("/img/background-img.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.navbar {
+	background-color: $navbar-color;
+	border-bottom: 1px solid black;
 }
 
 h1 {
@@ -68,8 +78,8 @@ h1 {
 	&:before, &:after {
 		display: block;
 		content: '';
-    height: 2px;
-    background-color: black;
+    height: 4px;
+    background-color: #4d1200;
     flex-grow: 1;
 		@include breakpoint(small) {
 			display: none;
@@ -143,7 +153,7 @@ h1 {
 			&:after {
 				left: 100%;
 				top: 45%;
-				border-left:4px solid black;
+				border-left: 4px solid $main-color2;
 				border-right: none;
 			}
 			@include breakpoint(small) {
@@ -152,13 +162,13 @@ h1 {
 				width: 100%;
 				&:after { // should be improved
 					left: auto;
-					left: -5px;
+					left: -4px;
 					top: 45%;
 					border-right: none;
 					border-top: 4px solid transparent;
 					border-bottom: 4px solid transparent;
 					border-left: none;
-					border-right: 4px solid black;
+					border-right: 4px solid $main-color2;
 				}
 			}
 		}
@@ -177,10 +187,10 @@ h1 {
 				height:0;
 				border-top: 4px solid transparent;
 				border-bottom: 4px solid transparent;
-				border-right:4px solid black;
+				border-right:4px solid $main-color2;
 				border-left: none;
 				position: absolute;
-				left: -5px;
+				left: -4px;
 				top: 45%;
 			}
 			@include breakpoint(small) { // unfortunately, duplicated of the above
@@ -189,13 +199,13 @@ h1 {
 				width: 100%;
 				&:after { // repetition should be avoided if possible
 					left: auto;
-					left: -5px;
+					left: -4px;
 					top: 45%;
 					border-right: none;
 					border-top: 4px solid transparent;
 					border-bottom: 4px solid transparent;
 					border-left: none;
-					border-right: 4px solid black;
+					border-right: 4px solid $main-color2;
 				}
 			}
 		}
@@ -211,24 +221,20 @@ h1 {
 		position: relative;
 		width: 128px;
 		height: 208px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-attachment: scroll;
-		background-size: cover;
 		margin-bottom: 5px;
 		margin-right: 5px;
 		margin-left: 5px;
+		overflow: hidden;
+		//@include background(inline, #fff, no-repeat, scroll);
 		.book-overlay {
-			display: none;
 			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
+			top: 0; right: 0; bottom: 0; left: 0;
+			opacity: 0;
 			width: 100%;
-			height: 100%;
+			//height: 100%;
 			background-color: rgba(0,0,0,0.8);
 			color: white;
+			@include transition(opacity 0.8s);
 			.book-title {
 				margin-top: $book-overlay-text-margin * 2;
 				font-size: 10px;
@@ -249,7 +255,18 @@ h1 {
 			}
 		}
 		&:hover .book-overlay {
-			display: inline-block;
+			opacity: 100;
+		}
+		img {
+			@include transition(all 0.8s);
+		}
+		&:hover img{
+			@include transform(scale(1.1))
 		}
 	}
+}
+
+footer {
+
+	border: 1px solid $background-default;
 }
