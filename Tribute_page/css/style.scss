@@ -16,9 +16,9 @@ Possibly add a section showing some of his works, possibly a longer quote that c
 Possibly add navbar
 */
 
-$main-color1: lightblue;
-$main-color2: blue;
-$background-main: white;
+$main-color1: #ffece6;
+$main-color2: #4d1200;
+//$background-main: white;
 
 $header-vertical-margin: 25px;
 $book-overlay-text-margin: 6px;
@@ -42,11 +42,19 @@ $book-overlay-text-margin: 6px;
 	padding: 0px;
 }
 
+
 body {
-	background: $background-main;
+	//height: 100%;
+	display:block;
+	background-color: #E3D4AD;
+	background-image: url("/img/background-img.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 h1 {
+	color: $main-color2;
 	margin-top: $header-vertical-margin;
 	margin-bottom: $header-vertical-margin;
 }
@@ -74,6 +82,7 @@ h1 {
 		margin-right: -30px;
 	}
 	h2 {
+		color: $main-color2;
 		text-align: center;
 		display: block;
 		margin: 0 10px;
@@ -143,7 +152,7 @@ h1 {
 				width: 100%;
 				&:after { // should be improved
 					left: auto;
-					left: -3px;
+					left: -5px;
 					top: 45%;
 					border-right: none;
 					border-top: 4px solid transparent;
@@ -171,16 +180,16 @@ h1 {
 				border-right:4px solid black;
 				border-left: none;
 				position: absolute;
-				left: -3px;
+				left: -5px;
 				top: 45%;
 			}
-			@include breakpoint(small) { // unfortunately, duplicated below
+			@include breakpoint(small) { // unfortunately, duplicated of the above
 				margin-left: 30px;
 				margin-right: 0px;
 				width: 100%;
 				&:after { // repetition should be avoided if possible
 					left: auto;
-					left: -3px;
+					left: -5px;
 					top: 45%;
 					border-right: none;
 					border-top: 4px solid transparent;
