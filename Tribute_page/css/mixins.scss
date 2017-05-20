@@ -184,3 +184,8 @@
 	background: radial-gradient(center, circle cover, $from $from-percent, $to $to-percent);
 	background-color: $from;
 }
+
+@mixin box-shadow($shadow...) {
+   -webkit-box-shadow: $shadow;
+   box-shadow: $shadow;
+}
