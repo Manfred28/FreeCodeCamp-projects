@@ -20,22 +20,55 @@ body {
   padding-top: 35px;
   display: block;
   background-color: #E3D4AD;
-  background-image: url("/img/background-img.jpg");
+  background-image: url("../img/background-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
+/*********** NAV STYLES ***********/
 .navbar {
   background-color: #E3D4AD;
   border-bottom: 1px solid black; }
 
-.header h1 {
-  color: #4d1200;
-  margin-top: 25px;
-  margin-bottom: 25px; }
-.header span {
-  font-weight: 600; }
+.navbar-nav li {
+  position: relative; }
+  .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 4px;
+    height: 0px;
+    background-color: #ffece6;
+    transition: all 0.4s ease-out; }
+  .navbar-nav li:hover a:before, .navbar-nav li .active:before {
+    height: 90%;
+    top: 5%; }
+  @media (min-width: 992px) {
+    .navbar-nav li a:before {
+      display: none; }
+    .navbar-nav li a::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      width: 0px;
+      height: 2px;
+      background-color: #ffece6;
+      transition: all 0.4s ease-out; }
+    .navbar-nav li:hover a:after, .navbar-nav li .active:after {
+      width: 90%;
+      left: 5%; } }
 
+:target {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden; }
+
+/***********  NAV END ***********/
+/*********** MAIN CONTENT ***********/
+/*********** SECTION TITLES ***********/
 .section-title {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -61,7 +94,24 @@ body {
     display: block;
     margin: 0 10px;
     max-width: 75%; }
+    .section-title h2:before {
+      display: block;
+      content: "";
+      margin-top: -75px;
+      height: 75px;
+      visibility: hidden; }
 
+/*********** SECTION TITLES END ***********/
+/*********** INTRO ***********/
+.header h1 {
+  color: #4d1200;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+.header span {
+  font-weight: 600; }
+
+/*********** INTRO END ***********/
+/*********** TIMELINE ***********/
 .timeline ul {
   position: relative;
   display: flex;
@@ -158,6 +208,8 @@ body {
             border-left: none;
             border-right: 4px solid #4d1200; } }
 
+/*********** TIMELINE END ***********/
+/*********** WORKS ***********/
 .book-showcase {
   list-style: none;
   display: flex;
@@ -241,7 +293,14 @@ body {
         -o-transform: scale(1.1);
         transform: scale(1.1); }
 
+/*********** WORKS END ***********/
 footer {
-  border-top: 1px solid #E3D4AD; }
+  border-top: 1px solid #4d1200; }
+  footer a {
+    color: black;
+    text-decoration: none; }
+  footer a:hover {
+    color: #ffece6;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

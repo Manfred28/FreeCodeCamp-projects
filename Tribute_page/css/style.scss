@@ -31,8 +31,13 @@ $book-overlay-margin: 6px;
 		}
 	}
 	@else if $size == medium {
-		@media screen and (min-width: 768px) {
-			@content
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+	@else if $size == large {
+		@media (min-width: 992px) {
+			@content;
 		}
 	}
 }
@@ -49,30 +54,69 @@ body {
 	padding-top: 35px;
 	display:block;
 	background-color: $background-default;
-	background-image: url("/img/background-img.jpg");
+	background-image: url("../img/background-img.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+/*********** NAV STYLES ***********/
 
 .navbar {
 	background-color: $navbar-color;
 	border-bottom: 1px solid black;
 }
 
-.header {
-	h1 {
-		color: $main-color2;
-		margin-top: $header-vertical-margin;
-		margin-bottom: $header-vertical-margin;
-	}
-	span {
-		font-weight: 600;
-	}
+.navbar-nav li {
+		position: relative;
+		a::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: -8px;
+			width: 4px;
+			height: 0px;
+			background-color: $main-color1;
+			transition: all 0.4s ease-out;
+		}
+		&:hover a:before, .active:before {
+			height: 90%;
+			top: 5%;
+		}
+		@include breakpoint(large) {
+			a:before {
+				display: none;
+			}
+			a::after {
+				content: "";
+				position: absolute;
+				bottom: 5px;
+				left: 50%;
+				width: 0px;
+				height: 2px;
+				background-color: $main-color1;
+				transition: all 0.4s ease-out;
+			}
+			&:hover a:after, .active:after {
+				width: 90%;
+				left: 5%;
+			}
+		}
 }
 
+:target {
+		// fix offset when using navigation created by navbar fixed to top
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+/***********  NAV END ***********/
 
 
+/*********** MAIN CONTENT ***********/
+	/*********** SECTION TITLES ***********/
 .section-title {
 	margin-top: $header-vertical-margin;
 	margin-bottom: $header-vertical-margin;
@@ -82,9 +126,9 @@ body {
 	&:before, &:after {
 		display: block;
 		content: '';
-    height: 4px;
-    background-color: #4d1200;
-    flex-grow: 1;
+		height: 4px;
+		background-color: #4d1200;
+		flex-grow: 1;
 		@include breakpoint(small) {
 			display: none;
 		}
@@ -101,11 +145,31 @@ body {
 		display: block;
 		margin: 0 10px;
 		max-width: 75%;
+		&:before {
+			display: block;
+			content: "";
+			margin-top: -75px;
+			height: 75px;
+			visibility: hidden;
+		}
 	}
 }
+	/*********** SECTION TITLES END ***********/
 
+	/*********** INTRO ***********/
+.header {
+	h1 {
+		color: $main-color2;
+		margin-top: $header-vertical-margin;
+		margin-bottom: $header-vertical-margin;
+	}
+	span {
+		font-weight: 600;
+	}
+}
+	/*********** INTRO END ***********/
 
-
+	/*********** TIMELINE ***********/
 .timeline ul {
 	position: relative;
 	display: flex;
@@ -215,7 +279,9 @@ body {
 		}
 	}
 }
+	/*********** TIMELINE END ***********/
 
+	/*********** WORKS ***********/
 .book-showcase {
 	list-style: none;
 	display: flex;
@@ -293,8 +359,16 @@ body {
 		}
 	}
 }
+	/*********** WORKS END ***********/
 
 footer {
-
-	border-top: 1px solid $background-default;
+	border-top: 1px solid $main-color2;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $main-color1;
+		text-decoration: none;
+	}
 }
