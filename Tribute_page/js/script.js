@@ -1,24 +1,18 @@
 $(document).ready(function () {
 var navLinks = $(".navbar-nav a");
+var sectionLinks = $(".section-title > a");
+var navHeight = $('nav').outerHeight();
 
-
-	navLinkActiveOnClick();
 	navLinkActiveOnScoll();
+	navLinkScrollOnClick();
+	navBrandScrollToTop();
 
 
-	function navLinkActiveOnClick () {
-		navLinks.click(function (link) {
-			navLinks.removeClass("active");
-			$(this).addClass("active");
-			$('.navbar-collapse').collapse('hide');
-		})
-	}
+
 
 	function navLinkActiveOnScoll () {
 		//add support for scrolling to bot
 		$(window).on('scroll', function () {
-			var sectionLinks = $(".section-title > a");
-			var navHeight = $('nav').outerHeight();
 			var curPos = $(this).scrollTop();
 			var docHeight = $(document).height();
 			var windowHeight = $(window).height();
@@ -36,6 +30,25 @@ var navLinks = $(".navbar-nav a");
 					$("nav").find('a[href="#' + $(this).attr("id") + '"]').addClass("active");
 				};
 			})
+		})
+	}
+
+	function scrollToSection (selector) {
+		$(document.body).animate({
+			"scrollTop" : selector.offset().top - navHeight * 1.5
+		}, 800);
+	}
+
+	function navLinkScrollOnClick () {
+		navLinks.click(function () {
+			var section = $(".section-title > a[id='" + $(this).attr("href").slice(1) + "']");
+			scrollToSection(section);
+		})
+	}
+
+	function navBrandScrollToTop () {
+		$("a[href='#top']").click(function () {
+			 scrollToSection($("#top"));
 		})
 	}
 })

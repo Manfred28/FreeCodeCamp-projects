@@ -4,12 +4,9 @@ Clear up code, jesus
 Try to implement layout with map, make code more sassy
 IE has an issue with the cross icon in timeline
 
-Style footer
-style navbar, add JS and transform
-Keep an eye out for border shadow and tiny borders
+
 Use different font families
 
-Mention somewhere that most of this is from wikipedia
 USE MIXINS WHERE APPROPRIATE
 */
 
@@ -79,7 +76,7 @@ body {
 			background-color: $main-color1;
 			transition: all 0.4s ease-out;
 		}
-		&:hover a:before, .active:before {
+		.active:before {
 			height: 90%;
 			top: 5%;
 		}
@@ -97,19 +94,26 @@ body {
 				background-color: $main-color1;
 				transition: all 0.4s ease-out;
 			}
-			&:hover a:after, .active:after {
+			.active:after {
 				width: 90%;
 				left: 5%;
 			}
 		}
 }
 
-:target {
-		// fix offset when using navigation created by navbar fixed to top
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
+.navbar-toggler {
+	border: none;
+	top: 13px;
+	&:focus {
+		outline: none;
+	}
+	span {
+		transition: all 0.4s ease-out;
+		transform: rotate(0deg);
+	}
+	&.collapsed span {
+		transform: rotate(-180deg);
+	}
 }
 
 /***********  NAV END ***********/
