@@ -6,6 +6,7 @@ IE has an issue with the cross icon in timeline
 
 
 Use different font families
+Add smaller background image on small screenszies
 
 USE MIXINS WHERE APPROPRIATE
 */
@@ -17,8 +18,9 @@ $main-color2: #4d1200;
 $background-default: #E3D4AD;
 $navbar-color: #E3D4AD;
 
+$title-font: 'Merriweather Sans', sans-serif;
 
-$header-vertical-margin: 25px;
+$header-vertical-margin: 35px;
 $book-overlay-margin: 6px;
 
 @mixin breakpoint($size) {
@@ -101,6 +103,14 @@ body {
 		}
 }
 
+.navbar-light .navbar-brand {
+	font-family: $title-font;
+	color: $main-color2;
+	.nav-link {
+		color: yellow;
+	}
+}
+
 .navbar-toggler {
 	border: none;
 	top: 13px;
@@ -118,6 +128,20 @@ body {
 
 /***********  NAV END ***********/
 
+
+/*********** HEADER START ***********/
+.header {
+	h1 {
+		color: $main-color2;
+		margin-top: $header-vertical-margin;
+		margin-bottom: $header-vertical-margin;
+		font-family: $title-font;
+	}
+	span {
+		font-weight: 600;
+	}
+}
+/*********** HEADER END ***********/
 
 /*********** MAIN CONTENT ***********/
 	/*********** SECTION TITLES ***********/
@@ -149,6 +173,8 @@ body {
 		display: block;
 		margin: 0 10px;
 		max-width: 75%;
+		font-family: $title-font;
+		font-size: 30px;
 		&:before {
 			display: block;
 			content: "";
@@ -159,19 +185,6 @@ body {
 	}
 }
 	/*********** SECTION TITLES END ***********/
-
-	/*********** INTRO ***********/
-.header {
-	h1 {
-		color: $main-color2;
-		margin-top: $header-vertical-margin;
-		margin-bottom: $header-vertical-margin;
-	}
-	span {
-		font-weight: 600;
-	}
-}
-	/*********** INTRO END ***********/
 
 	/*********** TIMELINE ***********/
 .timeline ul {
@@ -364,7 +377,8 @@ body {
 	}
 }
 	/*********** WORKS END ***********/
-
+/*********** MAIN END ***********/
+/*********** FOOTER START ***********/
 footer {
 	border-top: 1px solid $main-color2;
 	a {
@@ -376,3 +390,4 @@ footer {
 		text-decoration: none;
 	}
 }
+/*********** FOOTER END ***********/
