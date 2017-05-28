@@ -49,14 +49,16 @@ $book-overlay-margin: 6px;
 
 
 body {
-	//height: 100%;
 	padding-top: 35px;
 	display:block;
 	background-color: $background-default;
-	background-image: url("../img/background-img.jpg");
+	background-image: url("../img/background-img-small.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	@include breakpoint(medium) {
+		background-image: url("../img/background-img.jpg");
+	}
 }
 
 /*********** NAV STYLES ***********/
@@ -258,6 +260,7 @@ body {
 			}
 		}
 		.timeline-content { //even elements are not styled separately, they are the default
+			@include box-shadow(0 0 1px 1px rgba(85, 85, 73, 0.3));
 			width: calc(50% - 35px); // the -x px determines the distance between the element and the line in the middle when in large view
 			margin-left: auto;
 			transform: translate(0, 0);
@@ -313,6 +316,7 @@ body {
 
 		&:after {
 			@include box-shadow(0 0 4px 2px rgba(85, 85, 73, 0.5));
+			@include transition(opacity 0.5s);
 			content: '';
 		  position: absolute;
 			top: 0;
@@ -321,7 +325,6 @@ body {
 		  width: 100%;
 		  height: 100%;
 		  opacity: 0;
-			@include transition(opacity 0.5s);
 		}
 		&:hover:after {
 			opacity: 100;

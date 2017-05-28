@@ -18,10 +18,13 @@ body {
   padding-top: 35px;
   display: block;
   background-color: #E3D4AD;
-  background-image: url("../img/background-img.jpg");
+  background-image: url("../img/background-img-small.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  @media (min-width: 768px) {
+    body {
+      background-image: url("../img/background-img.jpg"); } }
 
 /*********** NAV STYLES ***********/
 .navbar {
@@ -186,6 +189,9 @@ body {
             border-left: none;
             border-right: 4px solid #4d1200; } }
     .timeline ul li .timeline-content {
+      -moz-box-shadow: 0 0 1px 1px rgba(85, 85, 73, 0.3);
+      -webkit-box-shadow: 0 0 1px 1px rgba(85, 85, 73, 0.3);
+      box-shadow: 0 0 1px 1px rgba(85, 85, 73, 0.3);
       width: calc(50% - 35px);
       margin-left: auto;
       transform: translate(0, 0);
@@ -239,6 +245,10 @@ body {
       -moz-box-shadow: 0 0 4px 2px rgba(85, 85, 73, 0.5);
       -webkit-box-shadow: 0 0 4px 2px rgba(85, 85, 73, 0.5);
       box-shadow: 0 0 4px 2px rgba(85, 85, 73, 0.5);
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s;
       content: '';
       position: absolute;
       top: 0;
@@ -246,11 +256,7 @@ body {
       z-index: -1;
       width: 100%;
       height: 100%;
-      opacity: 0;
-      -moz-transition: opacity 0.5s;
-      -o-transition: opacity 0.5s;
-      -webkit-transition: opacity 0.5s;
-      transition: opacity 0.5s; }
+      opacity: 0; }
     .book-showcase li:hover:after {
       opacity: 100; }
     .book-showcase li .book {
