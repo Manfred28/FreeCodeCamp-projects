@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="container d-flex flex-column flex-align-center">
+		  <div class="menu d-flex">
+		    <button id="reset">Reset</button>
+		    <div id="stateIndicator">Setting up game</div>
+		  </div>
+
+		  <div class="start-screen board-style d-flex flex-justify-around flex-align-center">
+	      <button value="2players" class="active">2 Players</button>
+	      <button value="computer">Computer</button>
+	      <button value="x" class="active">Player 1: <span>X</span></button>
+	      <button value="o">Player One: <span>O</span></button>
+	      <button value="start">Start</button>
+		  </div>
+
+		  <div id="board" class="d-flex board-style">
+		    <div class="board-tile flex-justify-center flex-align-center br-1 bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center br-1 bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center br-1 bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center br-1 bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center bb-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center br-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center br-1"></div>
+		    <div class="board-tile flex-justify-center flex-align-center"></div>
+		  </div>
+
+		  <div id="end-screen" class="board-style flex-justify-center flex-align-center">
+		  </div>
+		</div>
+	</body>
+</html>

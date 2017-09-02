@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gloria Hallelujah', cursive;
+  letter-spacing: 5px;
+}
+
+.container {
+  height: 500px;
+}
+
+.menu {
+  width: 400px;
+  margin-top: 20px;
+}
+
+#reset,
+#stateIndicator {
+  flex-grow: 1;
+  border: 1px solid black;
+  border-bottom: 0px;
+  flex-basis: 80px;
+  text-align: center;
+  background-color: #0da312;
+  color: white;
+  box-shadow: 2px 5px grey;
+}
+
+#reset:hover {
+  background-color: #00802b;
+}
+
+.start-screen {
+  width: 400px;
+  height: 400px;
+  background: green;
+  border: 1px solid black;
+}
+
+.start-screen button {
+  width: 45%;
+  height: 40px;
+  color: white;
+  background-color: transparent;
+  border: 1px dashed white;
+  border-radius: 20px;
+}
+
+.start-screen button:last-child {
+  width: 60%;
+}
+
+.start-screen button.active {
+  background-color: #00802b;
+  border: 1px solid white;
+}
+
+.start-screen button:hover {
+  border: 1px solid white;
+}
+
+.start-screen button > span {
+  font-size: 20px;
+}
+
+.board-style {
+  width: 400px;
+  height: 400px;
+  background: #0da312;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #0da312 0%, #009620 43%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #0da312 0%, #009620 43%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #0da312 0%, #009620 43%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0da312', endColorstr='#009620', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient
+     http://www.colorzilla.com/gradient-editor/ */
+  border: 1px solid black;
+  box-shadow: 2px 2px grey;
+}
+
+#board {
+  display: none;
+  */
+}
+
+.board-tile {
+  flex-basis: 30%;
+  flex-grow: 1;
+  height: 33%;
+  display: flex;
+  font-size: 40px;
+}
+
+.br-1 {
+  border-right: 1px solid white;
+}
+
+.bb-1 {
+  border-bottom: 1px solid white;
+}
+
+#end-screen {
+  color: white;
+  display: none;
+}
+
+
+/*   FLexbox classes */
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.mx-auto {
+  margin-auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+mr-auto {
+  margin-right: auto
+}
