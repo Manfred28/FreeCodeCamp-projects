@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pomodoro Clock</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="container col-12 col-md-8 mx-auto">
+		  <div class="row mb-4 mt-4">
+		    <h1 class="mx-auto">Pomodoro Clock</h1>
+		  </div>
+		  <div class="row justify-content-center text-center mb-4">
+		    <div class="col">
+		      <div class="mb-2">Session numbers</div>
+		      <div id="sessionNum">
+		        <button value="-" class="btn btn-outline-primary">-</button>
+		        <span>4</span>
+		        <button value="+" class="btn btn-outline-primary">+</button>
+		      </div>
+		    </div>
+		    <div class="col">
+		      <div class="mb-2">Session length</div>
+		      <div id="sessionLength">
+		        <button value="-" class="btn btn-outline-primary">-</button>
+		        <span>25</span>
+		        <button value="+" class="btn btn-outline-primary">+</button>
+		      </div>
+		    </div>
+		    <div class="col">
+		      <div class="mb-2">Break Length</div>
+		      <div id="breakLength">
+		        <button value="-" class="btn btn-outline-primary">-</button>
+		        <span>5</span>
+		        <button value="+" class="btn btn-outline-primary">+</button>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="row mb-3">
+		    <div class="clock-border mx-auto">
+		      <div class="clock d-flex flex-column  justify-content-center">
+		        <div class="align-self-center">Click to Start</div>
+		        <div class="align-self-center">25:00</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<audio src="https://raw.githubusercontent.com/Manfred28/hello-world/master/Simon_game/sound/simonSound1.mp3"></audio>
+	</body>
+</html>

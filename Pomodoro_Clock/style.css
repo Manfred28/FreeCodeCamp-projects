@@ -1,0 +1,58 @@
+@media (max-width: 480px) {
+  .btn {
+    /* Bootstrap .btn-sm styling for small devices */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+
+body {
+  background-color: #b3ffcc;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 5px;
+}
+
+#sessionNum > span,
+#sessionLength > span,
+#breakLength > span {
+  display: inline-block;
+  width: 20px;
+  /* avoid width jump when switching between single and double digit */
+}
+
+.clock-border {
+  border: 4px solid #e60000;
+  border-radius: 100%;
+  width: 350px;
+  height: 350px;
+}
+
+.clock {
+  height: 330px;
+  width: 330px;
+  margin: 6px 0px 0px 6px;
+  background-color: #ff704d;
+  border-radius: 100%;
+}
+
+.clock:hover,
+.clock:hover > div{
+  cursor: default;
+}
+
+.clock:hover > div:nth-child(1) {
+  color: #ffd1b3;
+}
+
+.clock > div {
+  font-size: 40px;
+}
