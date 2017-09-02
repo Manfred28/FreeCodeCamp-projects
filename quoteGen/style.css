@@ -1,0 +1,33 @@
+
+#quoteWindow {
+  position: relative;
+  margin-top: 40px;
+  min-height: 200px;
+  background-color: #d2a679;
+  border-radius: 20px;
+  -webkit-transition: -webkit-box-shadow 0.5s linear;
+  -moz-transition: -moz-box-shadow 0.5s linear;
+  -ms-transition: -ms-box-shadow 0.5s linear;
+  -o-transition: -o-box-shadow 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+#quote {
+  min-height: 80px;
+}
+
+#quoteBtn {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+
+#twitter {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+}
